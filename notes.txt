@@ -1,0 +1,10 @@
+## What I'd like from an AOC starter:
+- a script like "aoc-setup <day-number>"
+    - makes a directory for <day-number>
+    - downloads the input file (can't, the input is different per user)
+    - makes a new .ts file where I would write into
+    - sets up tests (?)
+- a script that compiles and runs the .ts file.
+- a script like "test" that would run tests
+    - maybe a nodemon watcher that would keep running tests live
+
