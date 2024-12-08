@@ -18,11 +18,14 @@ function isValid(lhs: number, nums: number[], operators: ((a: number, b: number)
             for (const operator of operators) {
                 tempResults.push(operator(nums[i-1], nums[i]))
             }
-        } else {
-            for (let j = 0; j < results.length; j++) {
-                for (const operator of operators) {
-                    tempResults.push(operator(results[j], nums[i]))
-                }
+
+            results = [...tempResults]
+            continue;
+        }
+
+        for (let j = 0; j < results.length; j++) {
+            for (const operator of operators) {
+                tempResults.push(operator(results[j], nums[i]))
             }
         }
         results = [...tempResults]
